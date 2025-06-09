@@ -11,7 +11,8 @@ const PORT = process.env.PORT || 3000; // Default to port 3000 if not specified
 // Set up middleware and routes
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/auth", AuthRouter);
+
+app.use("/api/auth", AuthRouter);
 
 app.get("/", (request, response) => {
     response.status(200).json({
